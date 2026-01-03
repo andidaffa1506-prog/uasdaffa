@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang Game of Thrones</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body { background:#0b0f14; color:#e8e6db; font-family:"Crimson Text",serif; display:flex; flex-direction:column; min-height:100vh; }
+    h1,h2 { font-family:"Cinzel",serif; color:#c9a227; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                  url('stark.jpg') center/cover no-repeat;
+      color:#fff; text-align:center; padding:200px 20px;
+      border-bottom:4px solid #c9a227;
+    }
+    .hero h2 { font-size:28px; margin-bottom:10px; }
+    .hero p { max-width:700px; margin:auto; font-size:18px; line-height:1.6; }
+    .clock { margin-top:15px; font-size:18px; color:#c9a227; font-weight:bold; }
+    .greeting { margin-top:5px; font-size:20px; color:#e8e6db; }
+    .highlight { background:#161a21; padding:15px; border-left:4px solid #c9a227; margin:20px 0; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    table, th, td { border:1px solid #c9a227; }
+    th, td { padding:10px; text-align:left; }
+    th { background:#11151b; color:#c9a227; }
+    td { background:#1c2129; }
+    footer { margin-top:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="#">Game of Thrones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Houses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Daftar</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <div class="hero">
+    <h2>Tentang Game of Thrones</h2>
+    <p>Serial epik fantasi yang mengisahkan perebutan takhta, intrik politik, dan legenda naga di Westeros.</p>
+    <div id="clock" class="clock">Memuat waktu...</div>
+    <div id="greeting" class="greeting">—</div>
+  </div>
+
+  <!-- Content -->
+  <div class="container my-5">
+    <div class="highlight">
+      <p><strong>Game of Thrones</strong> adalah sebuah serial televisi fantasi epik ...</p>
+    </div>
+
+    <h2>Fakta Cepat</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-dark text-light">Tayang selama 8 musim (2011–2019).</li>
+      <li class="list-group-item bg-dark text-light">Meraih puluhan penghargaan Emmy.</li>
+      <li class="list-group-item bg-dark text-light">Syuting di Irlandia Utara, Islandia, Spanyol, Kroasia, Maroko.</li>
+      <li class="list-group-item bg-dark text-light">Terinspirasi Wars of the Roses.</li>
+    </ul>
+
+    <h2 class="mt-4">Pemeran Utama</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered border-warning">
+        <thead>
+          <tr><th>Karakter</th><th>Nama Asli Aktor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jon Snow</td><td>Kit Harington</td></tr>
+          <tr><td>Daenerys Targaryen</td><td>Emilia Clarke</td></tr>
+          <tr><td>Tyrion Lannister</td><td>Peter Dinklage</td></tr>
+          <tr><td>Cersei Lannister</td><td>Lena Headey</td></tr>
+          <tr><td>Jaime Lannister</td><td>Nikolaj Coster-Waldau</td></tr>
+          <tr><td>Arya Stark</td><td>Maisie Williams</td></tr>
+          <tr><td>Sansa Stark</td><td>Sophie Turner</td></tr>
+          <tr><td>Bran Stark</td><td>Isaac Hempstead Wright</td></tr>
+          <tr><td>Ned Stark</td><td>Sean Bean</td></tr>
+          <tr><td>Robb Stark</td><td>Richard Madden</td></tr>
+          <tr><td>Jorah Mormont</td><td>Iain Glen</td></tr>
+          <tr><td>Theon Greyjoy</td><td>Alfie Allen</td></tr>
+          <tr><td>Davos Seaworth</td><td>Liam Cunningham</td></tr>
+          <tr><td>Brienne of Tarth</td><td>Gwendoline Christie</td></tr>
+          <tr><td>Sandor “The Hound” Clegane</td><td>Rory McCann</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Script jam & greeting -->
+  <script>
+    function pad(n){ return n.toString().padStart(2,'0'); }
+    function updateClock(){
+      const now=new Date();
+      const hh=pad(now.getHours());
+      const mm=pad(now.getMinutes());
+      const ss=pad(now.getSeconds());
+      const d=pad(now.getDate());
+      const m=pad(now.getMonth()+1);
+      const y=now.getFullYear();
+      document.getElementById('clock').textContent=`${d}/${m}/${y} • ${hh}:${mm}:${ss}`;
+
+      let greet="";
+      if(now.getHours()>=5 && now.getHours()<12){ greet="Selamat Pagi, Westeros!"; }
+      else if(now.getHours()>=12 && now.getHours()<18){ greet="Selamat Siang, Westeros!"; }
+      else { greet="Selamat Malam, Westeros!"; }
+      document.getElementById('greeting').textContent=greet;
+    }
+    setInterval(updateClock,1000);
+    updateClock();
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-4 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Andi Daffa Shidqi-251011700076-01SIFP001</p>
+    </div>
+  </footer>
+
+</body>
+</html>

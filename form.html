@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Fan Page Game of Thrones</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body { background:#0b0f14; color:#e8e6db; font-family:"Crimson Text",serif; display:flex; flex-direction:column; min-height:100vh; }
+    h1,h2 { font-family:"Cinzel",serif; color:#c9a227; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                  url('ned.jpg') center/cover no-repeat;
+      color:#fff; text-align:center; padding:150px 20px;
+      border-bottom:4px solid #c9a227;
+    }
+    .hero h2 { font-size:28px; margin-bottom:10px; }
+    .hero p { max-width:700px; margin:auto; font-size:18px; line-height:1.6; }
+    .form-label { color:#c9a227; font-weight:bold; }
+    .form-control, .form-select { background:#1c2129; color:#e8e6db; border:1px solid #c9a227; }
+    .form-control:focus, .form-select:focus { border-color:#ffc107; box-shadow:none; }
+    footer { margin-top:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="#">Game of Thrones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Houses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Pendaftaran Fan Page</h2>
+    <p>Bergabunglah dengan komunitas penggemar Game of Thrones dan isi formulir di bawah ini.</p>
+  </div>
+
+  <!-- Form Content -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Formulir Pendaftaran</h2>
+    <form class="bg-dark p-4 rounded border border-warning">
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap Anda" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Alamat Email</label>
+        <input type="email" class="form-control" id="email" placeholder="contoh@email.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="house" class="form-label">House Favorit</label>
+        <select class="form-select" id="house" required>
+          <option value="">-- Pilih House --</option>
+          <option>Stark</option>
+          <option>Lannister</option>
+          <option>Targaryen</option>
+          <option>Baratheon</option>
+          <option>Greyjoy</option>
+          <option>Martell</option>
+          <option>Tyrell</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="alasan" class="form-label">Alasan Bergabung</label>
+        <textarea class="form-control" id="alasan" rows="4" placeholder="Ceritakan mengapa Anda ingin bergabung" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning fw-bold">Daftar</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Andi Daffa Shidqi-251011700076-01SIFP001</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

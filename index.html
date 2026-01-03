@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game of Thrones — Houses</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body { background:#0b0f14; color:#e8e6db; font-family:"Crimson Text",serif; }
+    h1,h2 { font-family:"Cinzel",serif; color:#c9a227; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                  url('game-of-thrones-iron-throne-uhdpaper.com-4K-75.jpg') center/cover no-repeat;
+      color:#fff; text-align:center; padding:200px 20px;
+      border-bottom:4px solid #c9a227; border-radius:12px;
+    }
+    .motto { margin-left:10px; color:#c9a227; }
+    .clock { margin-top:15px; font-size:18px; color:#c9a227; font-weight:bold; }
+    .greeting { margin-top:5px; font-size:20px; color:#e8e6db; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-3">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="#">Game of Thrones</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Houses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>“Winter is Coming”</h2>
+    <p class="lead">Intrik, pengkhianatan, dan perebutan takhta mewarnai dunia Westeros. Setiap House memiliki sejarah, simbol, dan motto yang mencerminkan karakter mereka.</p>
+    <div id="clock" class="clock">Memuat waktu...</div>
+    <div id="greeting" class="greeting">—</div>
+  </div>
+
+  <!-- Content -->
+  <div class="container my-4">
+    <h2>Houses & Motto</h2>
+    <ul class="list-group">
+      <li class="list-group-item bg-dark text-light">
+        <button class="btn btn-danger btn-sm" data-house="stark">Ucapkan Motto</button>
+        Stark: <span id="motto-stark" class="motto">—</span>
+      </li>
+      <li class="list-group-item bg-dark text-light">
+        <button class="btn btn-danger btn-sm" data-house="lannister">Ucapkan Motto</button>
+        Lannister: <span id="motto-lannister" class="motto">—</span>
+      </li>
+      <li class="list-group-item bg-dark text-light">
+        <button class="btn btn-danger btn-sm" data-house="targaryen">Ucapkan Motto</button>
+        Targaryen: <span id="motto-targaryen" class="motto">—</span>
+      </li>
+      <li class="list-group-item bg-dark text-light">
+        <button class="btn btn-danger btn-sm" data-house="nightswatch">Ucapkan Motto</button>
+        Night’s Watch: <span id="motto-nightswatch" class="motto">—</span>
+      </li>
+    </ul>
+
+    <!-- History -->
+    <div class="card bg-secondary text-light my-4 border-warning">
+      <div class="card-body">
+        <h2 class="card-title">Sejarah Westeros</h2>
+        <p>Pada tahun 1 AC, Aegon Targaryen bersama kedua saudarinya, Visenya dan Rhaenys, melancarkan penaklukan besar terhadap Westeros. Berbekal tiga naga—Balerion the Black Dread, Vhagar, dan Meraxes—mereka menaklukkan kerajaan-kerajaan besar seperti Reach, Stormlands, dan Riverlands. Hanya Dorne yang berhasil mempertahankan kedaulatannya melalui strategi gerilya dan diplomasi.</p>
+        <p>Setelah kemenangan besar, Aegon membangun Aegonfort di tepi Blackwater Bay, yang kemudian berkembang menjadi kota King’s Landing. Ia dinobatkan sebagai Raja pertama yang memerintah atas “Andal, Rhoynar, dan First Men,” serta menjadi penguasa enam kerajaan yang bersatu.</p>
+        <p>Meskipun dikenal sebagai penakluk, Aegon juga berusaha menjaga stabilitas dan perdamaian setelah perang. Ia menghormati tradisi lokal, mengizinkan para lord tetap memerintah wilayah mereka selama bersumpah setia pada Iron Throne.</p>
+      </div>
+    </div>
+
+    <!-- Extra sections -->
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card bg-dark text-light h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="dragonmom.jpg" class="img-fluid rounded-start border border-warning" alt="Naga Targaryen">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p>
+                  Daenerys Targaryen adalah salah satu tokoh paling berpengaruh dalam kisah Game of Thrones. Lahir di Dragonstone sebagai putri terakhir Raja Aerys II Targaryen, ia tumbuh dalam pengasingan setelah keluarganya kehilangan takhta. Dari seorang gadis yang tampak rapuh, Daenerys berkembang menjadi pemimpin tangguh yang dikenal sebagai Mother of Dragons. Dengan tiga naga yang menetas dari telur—Drogon, Rhaegal, dan Viserion—ia menaklukkan kota-kota besar di Essos, membebaskan budak, dan mendapat julukan Breaker of Chains. Ambisinya untuk merebut kembali Iron Throne membawanya ke Westeros, di mana ia menjadi sosok yang ditakuti sekaligus dipuja. Namun, perjalanan penuh ambisi itu berakhir tragis ketika tindakannya di King’s Landing menimbulkan kehancuran besar, membuat Jon Snow mengakhiri hidupnya demi mencegah tirani baru.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card bg-dark text-light h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="jon.jpg" class="img-fluid rounded-start border border-warning" alt="Jon Snow">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p>
+                  Jon Snow adalah salah satu tokoh paling penting dalam kisah Game of Thrones. Ia dibesarkan di Winterfell sebagai anak haram Eddard Stark, meski sebenarnya adalah putra Lyanna Stark dan Rhaegar Targaryen. Sejak kecil, Jon tumbuh dengan rasa terasing, namun tetap menjunjung tinggi nilai kehormatan keluarga Stark. Keputusan bergabung dengan Night's Watch membawanya ke perjalanan panjang yang penuh pengorbanan, dari menghadapi ancaman Wildlings hingga melawan White Walkers. Kepemimpinannya membuatnya dipercaya sebagai Lord Commander, lalu diangkat menjadi King in the North setelah kemenangan di Battle of the Bastards. Identitas aslinya sebagai pewaris sah Iron Throne akhirnya terungkap, tetapi Jon memilih jalan berbeda: membunuh Daenerys Targaryen demi mencegah tirani, lalu kembali ke utara bersama Free Folk. Kisah Jon Snow mencerminkan dilema antara kehormatan, pengorbanan, dan pencarian jati diri.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const mottos = {
+    stark: "Winter Is Coming.",
+    lannister: "Hear Me Roar! (A Lannister Always Pays His Debts)",
+    targaryen: "Fire and Blood.",
+    nightswatch: "Night Gathers, and Now My Watch Begins."
+  };
+
+  // Event listener untuk tombol motto
+  document.querySelectorAll('button[data-house]').forEach(button => {
+    button.addEventListener('click', () => {
+      const house = button.getAttribute('data-house');
+      document.getElementById(`motto-${house}`).textContent = mottos[house];
+    });
+  });
+
+  // Fungsi update waktu realtime + greeting
+  function pad(n){ return n.toString().padStart(2,'0'); }
+  function updateClock(){
+    const now=new Date();
+    const hh=pad(now.getHours());
+    const mm=pad(now.getMinutes());
+    const ss=pad(now.getSeconds());
+    const d=pad(now.getDate());
+    const m=pad(now.getMonth()+1);
+    const y=now.getFullYear();
+    document.getElementById('clock').textContent=`${d}/${m}/${y} • ${hh}:${mm}:${ss}`;
+
+    let greet="";
+    if(now.getHours()>=5 && now.getHours()<12){ greet="Selamat Pagi, Westeros!"; }
+    else if(now.getHours()>=12 && now.getHours()<18){ greet="Selamat Siang, Westeros!"; }
+    else { greet="Selamat Malam, Westeros!"; }
+    document.getElementById('greeting').textContent=greet;
+  }
+  setInterval(updateClock,1000);
+  updateClock();
+</script>
+
+ <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-4 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Andi Daffa Shidqi-251011700076-01SIFP001</p>
+    </div>
+  </footer>

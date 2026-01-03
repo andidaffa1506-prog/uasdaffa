@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri Game of Thrones</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body { background:#0b0f14; color:#e8e6db; font-family:"Crimson Text",serif; display:flex; flex-direction:column; min-height:100vh; }
+    h1,h2 { font-family:"Cinzel",serif; color:#c9a227; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                  url('lawannaga.jpg') center/cover no-repeat;
+      color:#fff; text-align:center; padding:150px 20px;
+      border-bottom:4px solid #c9a227;
+    }
+    .hero h2 { font-size:28px; margin-bottom:10px; }
+    .hero p { max-width:700px; margin:auto; font-size:18px; line-height:1.6; }
+    .clock { margin-top:15px; font-size:18px; color:#c9a227; font-weight:bold; }
+    .greeting { margin-top:5px; font-size:20px; color:#e8e6db; }
+    .gallery img {
+      height:200px; object-fit:cover;
+      border-radius:12px; border:3px solid #c9a227;
+    }
+    footer { margin-top:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="#">Game of Thrones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Houses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Daftar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Galeri Game of Thrones</h2>
+    <p>Koleksi gambar epik dari dunia Westeros dan Essos.</p>
+    <div id="clock" class="clock">Memuat waktu...</div>
+    <div id="greeting" class="greeting">—</div>
+  </div>
+
+  <!-- Content -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Galeri Foto</h2>
+    <div class="row g-4 gallery">
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="epicjon.jpg" class="card-img-top" alt="Battle of Bastards">
+          <div class="card-body text-center">The Battle Of Bastards</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="jaimie.jpg" class="card-img-top" alt="Jaimie Lannister">
+          <div class="card-body text-center">Jaimie Lannister</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="ironthrone.jpg" class="card-img-top" alt="Iron Throne">
+          <div class="card-body text-center">Iron Throne</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="nightking.jpg" class="card-img-top" alt="The Night King">
+          <div class="card-body text-center">The Night King</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="ned.jpg" class="card-img-top" alt="Ned Stark">
+          <div class="card-body text-center">Ned Stark</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-warning h-100">
+          <img src="redwedding.jpg" class="card-img-top" alt="Red Wedding">
+          <div class="card-body text-center">Red Wedding</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bootstrap -->
+  <footer class="bg-dark text-light text-center py-3 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Andi Daffa Shidqi-251011700076-01SIFP001</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script jam & greeting -->
+  <script>
+    function pad(n){ return n.toString().padStart(2,'0'); }
+    function updateClock(){
+      const now=new Date();
+      const hh=pad(now.getHours());
+      const mm=pad(now.getMinutes());
+      const ss=pad(now.getSeconds());
+      const d=pad(now.getDate());
+      const m=pad(now.getMonth()+1);
+      const y=now.getFullYear();
+      document.getElementById('clock').textContent=`${d}/${m}/${y} • ${hh}:${mm}:${ss}`;
+
+      let greet="";
+      if(now.getHours()>=5 && now.getHours()<12){ greet="Selamat Pagi, Westeros!"; }
+      else if(now.getHours()>=12 && now.getHours()<18){ greet="Selamat Siang, Westeros!"; }
+      else { greet="Selamat Malam, Westeros!"; }
+      document.getElementById('greeting').textContent=greet;
+    }
+    setInterval(updateClock,1000);
+    updateClock();
+  </script>
+</body>
+</html>
